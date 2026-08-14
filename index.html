@@ -1,347 +1,146 @@
-/* Reset & Base Styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquachem Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-body {
-  font-family: 'Manrope', sans-serif;
-  background-color: #FAFAFA;
-  color: #22282B;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
+  <!-- Header Navigation -->
+  <header class="navbar">
+    <nav class="nav-links">
+      <a href="#" class="active">Home</a>
+      <a href="#">Karte</a>
+      <a href="#">Projekti</a>
+      <a href="#">Katalozi</a>
+    </nav>
+    <a href="#" class="btn-primary btn-webshop-top">Webshop</a>
+  </header>
 
-/* Header Container */
-.navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  z-index: 10;
-  pointer-events: none;
-}
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <img class="hero-bg" src="assets/hero.jpg" alt="Aquachem Hero">
+    <div class="hero-content">
+      <img src="assets/logo.png" alt="Aquachem Logo" class="hero-logo">
+    </div>
+  </section>
 
-/* Centered Navigation Bar */
-.nav-links {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%); /* Dynamic optical centering */
-  width: 520px;               /* Larger width to fit text smoothly */
-  height: 58px;              /* Taller profile */
-  background: rgba(247, 247, 247, 0.25);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 6px;
-  border-radius: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  pointer-events: auto;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  animation: navEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat-item">
+      <h2>20+</h2>
+      <p>Godina iskustva</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-item">
+      <h2>500+</h2>
+      <p>Realiziranih projekata</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-item">
+      <h2>50+</h2>
+      <p>Brandova u ponudi</p>
+    </div>
+    <div class="divider"></div>
+    <div class="stat-item">
+      <h2>13</h2>
+      <p>Zemalja regije</p>
+    </div>
+  </section>
 
-/* Navigation Links */
-.nav-links a {
-  color: #FFFFFF;
-  text-decoration: none;
-  font-size: 17px;           /* Increased text size */
-  font-weight: 600;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 22px;
-  border-radius: 50px;
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
+  <!-- Naše Djelatnosti -->
+  <section class="section container">
+    <div class="section-header">
+      <h2>Naše djelatnosti</h2>
+      <p>Aquachem je tvrtka specijalizirana za veleprodaju, distribuciju, proizvodnju i inženjering bazena, bio-bazena, vodenih parkova spray parkova i fontana.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <img src="assets/proizvodnja.png" alt="Proizvodnja">
+        <h3>Proizvodnja</h3>
+      </div>
+      <div class="card">
+        <img src="assets/inzenjering.png" alt="Inženjering">
+        <h3>Inženjering</h3>
+      </div>
+      <div class="card">
+        <img src="assets/distribucija.jpg" alt="Distribucija">
+        <h3>Distribucija</h3>
+      </div>
+    </div>
+  </section>
 
-.nav-links a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+  <!-- Naše Usluge -->
+  <section class="section container">
+    <div class="section-header">
+      <h2>Naše usluge</h2>
+    </div>
+    <div class="cards-grid centered-grid">
+      <div class="card">
+        <img src="assets/tehnicka-podrska.png" alt="Tehnička podrška">
+        <h3>Tehnička podrška</h3>
+      </div>
+      <div class="card">
+        <img src="assets/servis.png" alt="Servis">
+        <h3>Servis</h3>
+      </div>
+    </div>
+  </section>
 
-.nav-links a.active {
-  background: #FFFFFF;
-  color: #22282B;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
-}
+  <!-- Realizirani Projekti (Video Showcase) -->
+  <section class="video-showcase container">
+    <h2>Realizirani projekti</h2>
+    <div class="video-container">
+      <video autoplay loop muted playsinline>
+        <source src="assets/landing-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay-info">
+        <span>Darko Rukavina</span>
+        <button class="btn-white">Pogledaj</button>
+      </div>
+    </div>
+  </section>
 
-/* Webshop Top Right Button */
-.btn-webshop-top {
-  position: absolute;
-  top: 50px;
-  right: 5%;                 /* Anchored relative to top-right viewport */
-  pointer-events: auto;
-  font-size: 16px;
-  padding: 14px 32px;
-  animation: navEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
-}
+  <!-- Izdvojeni Brandovi -->
+  <section class="section container">
+    <div class="section-header">
+      <h2>Izdvojeni brandovi</h2>
+      <p>U svojoj ponudi Aquachem nudi više od 50 proizvođača bazenske opreme.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card brand-card">
+        <h3>Ezarri</h3>
+        <p>Keramika</p>
+      </div>
+      <div class="card brand-card">
+        <h3>Passion Spas</h3>
+        <p>Hidromasažne kade, saune i ledene kupke</p>
+      </div>
+      <div class="card brand-card">
+        <h3>Compass Pools</h3>
+        <p>Ugradbeni karbon-keramički bazeni</p>
+      </div>
+    </div>
+    <div class="action-wrapper">
+      <a href="#" class="btn-dark">Webshop</a>
+    </div>
+  </section>
 
-/* Keyframe Entrance Animation */
-@keyframes navEntrance {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px) translateX(-50%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) translateX(-50%);
-  }
-}
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-bottom">
+      <p>© Aquachem. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#">FAQ</a>
+        <a href="#">Kontakt</a>
+      </div>
+    </div>
+  </footer>
 
-/* General Buttons */
-.btn-primary, .btn-dark, .btn-white {
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: pointer;
-  border: none;
-  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.btn-primary {
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
-  background: transparent;
-}
-
-.btn-primary:hover {
-  background: #FFFFFF;
-  color: #22282B;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
-}
-
-.btn-dark {
-  background: #22282B;
-  color: #FFFFFF;
-}
-
-.btn-dark:hover {
-  background: #000000;
-  transform: translateY(-2px);
-}
-
-.btn-white {
-  background: #FFFFFF;
-  color: #22282B;
-}
-
-.btn-white:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-}
-
-/* Hero Section & Centered Logo */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 700px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hero-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: 2;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90%;
-  max-width: 1001px;
-}
-
-.hero-logo {
-  width: 100%;
-  max-width: 1001px;
-  height: auto;
-  max-height: 196px;
-  object-fit: contain;
-  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.3));
-}
-
-/* Stats Section */
-.stats {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 60px 10%;
-  background: #FAFAFA;
-  border-bottom: 1px solid #E3E3E3;
-}
-
-.stat-item h2 {
-  font-size: 56px;
-  font-weight: 600;
-}
-
-.stat-item p {
-  font-size: 18px;
-  color: #667085;
-}
-
-.divider {
-  width: 1px;
-  height: 50px;
-  background-color: #E3E3E3;
-}
-
-/* Content Layout Containers */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 80px 20px;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 48px;
-  gap: 40px;
-}
-
-.section-header h2 {
-  font-size: 48px;
-  font-weight: 600;
-  flex: 1;
-}
-
-.section-header p {
-  font-size: 20px;
-  color: #667085;
-  flex: 1;
-}
-
-/* Grid Layouts */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-}
-
-.centered-grid {
-  justify-content: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.card img {
-  width: 100%;
-  height: 480px;
-  object-fit: cover;
-  border-radius: 24px;
-}
-
-.card h3 {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.brand-card {
-  padding: 32px;
-  background: #FFFFFF;
-  border-radius: 24px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-}
-
-.brand-card p {
-  color: #667085;
-}
-
-/* Video Section */
-.video-showcase {
-  position: relative;
-}
-
-.video-showcase h2 {
-  font-size: 48px;
-  margin-bottom: 24px;
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  border-radius: 40px;
-  overflow: hidden;
-}
-
-.video-container video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.video-overlay-info {
-  position: absolute;
-  bottom: 30px;
-  left: 40px;
-  right: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #FFFFFF;
-}
-
-.action-wrapper {
-  text-align: center;
-  margin-top: 40px;
-}
-
-/* Footer Section */
-.footer {
-  background: #FAFAFA;
-  padding: 40px 20px;
-  border-top: 1px solid #22282B;
-}
-
-.footer-bottom {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-links a {
-  color: #22282B;
-  text-decoration: none;
-  margin-left: 24px;
-}
+</body>
+</html>
