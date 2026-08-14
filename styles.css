@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Navigation Header Canvas */
+/* Header Container */
 .navbar {
   position: absolute;
   top: 0;
@@ -24,14 +24,14 @@ body {
   pointer-events: none;
 }
 
-/* Centered Navigation Bar (Larger Dimensions & Dynamic Centering) */
+/* Centered Navigation Bar */
 .nav-links {
   position: absolute;
   top: 50px;
   left: 50%;
-  transform: translateX(-50%); /* Ensures true optical centering on all monitor sizes */
-  width: 520px;               /* Expanded width to fit larger text cleanly */
-  height: 58px;              /* Taller bar for stronger visual presence */
+  transform: translateX(-50%);
+  width: 520px;
+  height: 58px;
   background: rgba(247, 247, 247, 0.25);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -42,22 +42,20 @@ body {
   align-items: center;
   justify-content: space-between;
   pointer-events: auto;
-  
-  /* Entrance Animation */
   animation: navEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Larger Navigation Buttons & Animations */
+/* Navigation Links */
 .nav-links a {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 17px;           /* Increased font size */
+  font-size: 17px;
   font-weight: 600;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 22px;           /* Generous button padding */
+  padding: 0 22px;
   border-radius: 50px;
   position: relative;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
@@ -66,7 +64,6 @@ body {
 .nav-links a:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links a.active {
@@ -78,7 +75,7 @@ body {
 .btn-webshop-top {
   position: absolute;
   top: 50px;
-  right: 5%;                 /* Positioned cleanly on the top-right */
+  right: 5%;
   pointer-events: auto;
   font-size: 16px;
   padding: 14px 32px;
@@ -97,7 +94,7 @@ body {
   }
 }
 
-/* Buttons Styling */
+/* Buttons */
 .btn-primary, .btn-dark, .btn-white {
   display: inline-block;
   padding: 12px 28px;
@@ -106,7 +103,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   border: none;
-  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .btn-primary {
@@ -119,7 +116,6 @@ body {
   background: #FFFFFF;
   color: #22282B;
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.25);
 }
 
 .btn-dark {
@@ -142,7 +138,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* Hero Section & Perfectly Centered Logo */
+/* Hero Section & Centered Logo */
 .hero {
   position: relative;
   width: 100%;
@@ -189,37 +185,49 @@ body {
   object-fit: contain;
 }
 
-/* Stats Section */
+/* Stats Section (VEĆI BROJEVI I TEKST) */
 .stats {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 60px 10%;
+  padding: 80px 10%;  /* Povećan padding s vrha i dna */
   background: #FAFAFA;
   border-bottom: 1px solid #E3E3E3;
 }
 
+.stat-item {
+  text-align: center;
+}
+
 .stat-item h2 {
-  font-size: 56px;
-  font-weight: 600;
+  font-size: 64px;    /* Povećano sa 56px na 64px */
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 8px;
 }
 
 .stat-item p {
-  font-size: 18px;
+  font-size: 20px;    /* Povećano sa 18px na 20px */
   color: #667085;
+  font-weight: 500;
 }
 
 .divider {
   width: 1px;
-  height: 50px;
+  height: 60px;
   background-color: #E3E3E3;
 }
 
-/* Content Sections */
+/* Content Layout Containers */
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 80px 20px;
+}
+
+/* Veći razmak izmedu linije/stats sekcije i "Naše djelatnosti" */
+.djelatnosti-section {
+  padding-top: 130px; /* Dodan značajan vertikalni razmak */
 }
 
 .section-header {
@@ -324,7 +332,7 @@ body {
   margin-top: 40px;
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
   background: #FAFAFA;
   padding: 40px 20px;
