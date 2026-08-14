@@ -42,7 +42,6 @@ body {
   align-items: center;
   justify-content: space-between;
   pointer-events: auto;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   
   /* Entrance Animation */
   animation: navEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -73,7 +72,6 @@ body {
 .nav-links a.active {
   background: #FFFFFF;
   color: #22282B;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 /* Webshop Top Right Button */
@@ -189,7 +187,6 @@ body {
   height: auto;
   max-height: 196px;
   object-fit: contain;
-  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.3));
 }
 
 /* Stats Section */
