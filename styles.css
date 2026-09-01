@@ -1,4 +1,4 @@
-/* build: v5 */
+/* build: v6 */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -287,9 +287,47 @@ body {
 }
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+/* Hover-reveal description under djelatnosti/usluge cards */
+.service-desc {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding-top: 12px;
+  background: #FAFAFA;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 5;
+}
+
+.card:hover .service-desc,
+.card:focus-within .service-desc {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.service-desc p {
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.service-desc .btn-sm {
+  margin-top: 14px;
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 14px;
 }
 
 .card img {
@@ -392,6 +430,11 @@ body {
    but without its 1280px max-width so the 1440px map box can center properly */
 .map-wrap {
   padding: 80px 20px;
+}
+
+.map-content {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /* Map Section (Google My Maps embed) */
