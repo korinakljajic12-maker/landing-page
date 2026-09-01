@@ -1,4 +1,4 @@
-/* build: v4 */
+/* build: v5 */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -100,7 +100,9 @@ body {
   padding: 12px 28px;
   border-radius: 100px;
   text-decoration: none;
+  font-family: 'Manrope', sans-serif;
   font-weight: 600;
+  font-size: 16px;
   cursor: pointer;
   border: none;
   transition: transform 0.25s ease, background-color 0.25s ease;
@@ -223,6 +225,27 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 80px 20px;
+}
+
+/* Wider variant for sections whose content needs to exceed 1280px
+   (video showcase, brand grid) without being clipped by .container */
+.container-wide {
+  max-width: 1460px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+/* Izdvojeni brandovi wrapper: 1360px content width */
+.container-brands {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.cards-grid.brand-grid {
+  max-width: 1360px;
+  margin: 0 auto;
+  gap: 72px;
 }
 
 /* Veći razmak izmedu linije/stats sekcije i "Naše djelatnosti" */
