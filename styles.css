@@ -1,3 +1,4 @@
+/* build: v3 */
 /* Reset & Base Styles */
 * {
   box-sizing: border-box;
@@ -386,13 +387,29 @@ body {
 
 .map-section iframe {
   display: block;
+  position: absolute;
+  top: -60px;
+  left: 0;
   width: 100%;
-  /* Google's top bar (owner/title strip) is roughly 37px tall.
-     Make the iframe that much taller, then pull it up so the
-     bar sits above the visible area and gets clipped by overflow: hidden. */
-  height: calc(100% + 37px);
-  margin-top: -37px;
+  /* Google's top bar (owner/title strip) is roughly 50-60px tall.
+     Push the iframe up by more than that so the bar is fully
+     above the visible area, then the wrapper's overflow:hidden clips it. */
+  height: calc(100% + 60px);
   border: 0;
+}
+
+/* Safety strip: covers any leftover sliver of the bar regardless of
+   the exact bar height, blending into the page background. */
+.map-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: #FAFAFA;
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* Footer Section */
